@@ -13,6 +13,8 @@ namespace TddStudyTest
             Dollar five = new Dollar(5);
             five.times(2);
             Assert.AreEqual(10, five.amount);
+            five.times(3);
+            Assert.AreEqual(15, five.amount);
         }
     }
 }
