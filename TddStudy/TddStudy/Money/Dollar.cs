@@ -15,7 +15,7 @@ namespace TddStudy.Money
             this.Amount = amount;
         }
 
-        public Dollar times(int multiplier)
+        public Dollar Times(int multiplier)
         {
             return new Dollar(this.Amount * multiplier);
         }
