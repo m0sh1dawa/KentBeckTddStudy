@@ -22,7 +22,8 @@ namespace TddStudy.Money
 
         public override bool Equals(object obj)
         {
-            return true;
+            var dollar = (Dollar)obj;
+            return amount == dollar.amount;
         }
     }
 }
