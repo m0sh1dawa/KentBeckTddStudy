@@ -21,6 +21,7 @@ namespace TddStudyTest
         public void TestEquality()
         {
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
         }
     }
 }
