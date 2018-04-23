@@ -8,22 +8,22 @@ namespace TddStudy.Money
 {
     public class Dollar
     {
-        public int amount;
+        public int Amount;
 
         public Dollar(int amount)
         {
-            this.amount = amount;
+            this.Amount = amount;
         }
 
         public Dollar times(int multiplier)
         {
-            return new Dollar(this.amount * multiplier);
+            return new Dollar(this.Amount * multiplier);
         }
 
         public override bool Equals(object obj)
         {
             var dollar = (Dollar)obj;
-            return amount == dollar.amount;
+            return Amount == dollar.Amount;
         }
     }
 }
