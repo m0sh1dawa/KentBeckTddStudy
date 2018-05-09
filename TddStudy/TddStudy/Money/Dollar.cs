@@ -17,11 +17,5 @@ namespace TddStudy.Money
         {
             return new Dollar(this.Amount * multiplier);
         }
-
-        public override bool Equals(object obj)
-        {
-            var dollar = (Dollar)obj;
-            return Amount == dollar.Amount;
-        }
     }
 }
