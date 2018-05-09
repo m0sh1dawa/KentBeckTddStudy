@@ -8,11 +8,9 @@ namespace TddStudy.Money
 {
     public class Dollar : Money
     {
-        private int Amount;
-
         public Dollar(int amount)
         {
-            this.Amount = amount;
+            Amount = amount;
         }
 
         public Dollar Times(int multiplier)

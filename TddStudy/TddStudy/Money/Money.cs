@@ -8,5 +8,6 @@ namespace TddStudy.Money
 {
     public class Money
     {
+        protected int Amount;
     }
 }
