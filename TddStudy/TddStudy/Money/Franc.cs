@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace TddStudy.Money
 {
-    public class Franc
+    public class Franc : Money
     {
-        private int Amount;
-
         public Franc(int amount)
         {
             this.Amount = amount;
