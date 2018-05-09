@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TddStudy.Money
 {
-    public class Dollar
+    public class Dollar : Money
     {
         private int Amount;
 
