@@ -13,7 +13,7 @@ namespace TddStudy.Money
             this.Amount = amount;
         }
 
-        public Money Times(int multiplier)
+        public override Money Times(int multiplier)
         {
             return new Franc(this.Amount * multiplier);
         }
