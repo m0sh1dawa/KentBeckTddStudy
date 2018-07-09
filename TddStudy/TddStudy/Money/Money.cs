@@ -22,5 +22,10 @@ namespace TddStudy.Money
         {
             return new Dollar(amount);
         }
+
+        public static Money Franc(int amout)
+        {
+            return new Franc(amout);
+        }
     }
 }
