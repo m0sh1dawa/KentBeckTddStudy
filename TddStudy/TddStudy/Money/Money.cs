@@ -12,6 +12,12 @@ namespace TddStudy.Money
 
         protected string currency;
 
+        public Money(int amount, string currency)
+        {
+            Amount = amount;
+            this.currency = currency;
+        }
+
         public abstract Money Times(int multiplier);
 
         public string Currency()
