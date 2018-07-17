@@ -11,16 +11,12 @@ namespace TddStudy.Money
         public Franc(int amount)
         {
             this.Amount = amount;
+            currency = "CHF";
         }
 
         public override Money Times(int multiplier)
         {
             return new Franc(this.Amount * multiplier);
-        }
-
-        public override string Currency()
-        {
-            return "CHF";
         }
     }
 }

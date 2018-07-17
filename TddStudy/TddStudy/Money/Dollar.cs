@@ -11,16 +11,12 @@ namespace TddStudy.Money
         public Dollar(int amount)
         {
             Amount = amount;
+            currency = "USD";
         }
 
         public override Money Times(int multiplier)
         {
             return new Dollar(this.Amount * multiplier);
-        }
-
-        public override string Currency()
-        {
-            return "USD";
         }
     }
 }

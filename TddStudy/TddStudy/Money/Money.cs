@@ -10,9 +10,14 @@ namespace TddStudy.Money
     {
         protected int Amount;
 
+        protected string currency;
+
         public abstract Money Times(int multiplier);
 
-        public abstract string Currency();
+        public string Currency()
+        {
+            return currency;
+        }
 
         public override bool Equals(object obj)
         {
