@@ -27,12 +27,12 @@ namespace TddStudy.Money
 
         public static Money Dollar(int amount)
         {
-            return new Dollar(amount);
+            return new Dollar(amount, "USD");
         }
 
         public static Money Franc(int amout)
         {
-            return new Franc(amout);
+            return new Franc(amout, "CHF");
         }
     }
 }
