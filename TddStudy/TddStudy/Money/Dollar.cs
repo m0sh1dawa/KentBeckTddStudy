@@ -17,5 +17,10 @@ namespace TddStudy.Money
         {
             return new Dollar(this.Amount * multiplier);
         }
+
+        public override string Currency()
+        {
+            return "USD";
+        }
     }
 }

@@ -17,5 +17,10 @@ namespace TddStudy.Money
         {
             return new Franc(this.Amount * multiplier);
         }
+
+        public override string Currency()
+        {
+            return "CHF";
+        }
     }
 }
