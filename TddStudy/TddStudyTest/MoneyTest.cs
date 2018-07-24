@@ -39,5 +39,11 @@ namespace TddStudyTest
             Assert.AreEqual("USD", Money.Dollar(1).Currency());
             Assert.AreEqual("CHF", Money.Franc(1).Currency());
         }
+
+        [TestMethod]
+        public void TestDifferentClassEquality()
+        {
+            Assert.AreEqual(new Money(10, "CHF"), new Franc(10, "CHF"));
+        }
     }
 }
