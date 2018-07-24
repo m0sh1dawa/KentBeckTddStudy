@@ -14,7 +14,7 @@ namespace TddStudy.Money
 
         public override Money Times(int multiplier)
         {
-            return Franc(Amount * multiplier);
+            return new Franc(Amount * multiplier, currency);
         }
     }
 }
