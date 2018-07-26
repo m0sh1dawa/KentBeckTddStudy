@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TddStudy.Money
 {
-    public class Money
+    public class Money : IExpression
     {
         protected int Amount;
 
@@ -23,7 +23,7 @@ namespace TddStudy.Money
             return new Money(Amount * multiplier, currency);
         }
 
-        public Money Plus(Money added)
+        public IExpression Plus(Money added)
         {
             return new Money(Amount + added.Amount, currency);
         }

@@ -33,8 +33,11 @@ namespace TddStudyTest
         [TestMethod]
         public void TestSimpleAddition()
         {
-            Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
-            Assert.AreEqual(Money.Dollar(10), sum);
+            Money five = Money.Dollar(5);
+            IExpression sum = five.Plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.Reduce(sum, "USD");
+            Assert.AreEqual(Money.Dollar(10), reduced);
         }
     }
 }
