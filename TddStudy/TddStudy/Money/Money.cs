@@ -23,6 +23,11 @@ namespace TddStudy.Money
             return new Money(Amount * multiplier, currency);
         }
 
+        public Money Plus(Money added)
+        {
+            return new Money(Amount + added.Amount, currency);
+        }
+
         public string Currency()
         {
             return currency;
