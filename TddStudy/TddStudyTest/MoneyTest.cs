@@ -20,17 +20,7 @@ namespace TddStudyTest
         {
             Assert.IsTrue(Money.Dollar(5).Equals(Money.Dollar(5)));
             Assert.IsFalse(Money.Dollar(5).Equals(Money.Dollar(6)));
-            Assert.IsTrue(Money.Franc(5).Equals(Money.Franc(5)));
-            Assert.IsFalse(Money.Franc(5).Equals(Money.Franc(6)));
             Assert.IsFalse(Money.Franc(5).Equals(Money.Dollar(5)));
-        }
-
-        [TestMethod]
-        public void TestFrancMultiplication()
-        {
-            Money five = Money.Franc(5);
-            Assert.AreEqual(Money.Franc(10), five.Times(2));
-            Assert.AreEqual(Money.Franc(15), five.Times(3));
         }
 
         [TestMethod]
@@ -38,12 +28,6 @@ namespace TddStudyTest
         {
             Assert.AreEqual("USD", Money.Dollar(1).Currency());
             Assert.AreEqual("CHF", Money.Franc(1).Currency());
-        }
-
-        [TestMethod]
-        public void TestDifferentClassEquality()
-        {
-            Assert.AreEqual(new Money(10, "CHF"), new Franc(10, "CHF"));
         }
     }
 }

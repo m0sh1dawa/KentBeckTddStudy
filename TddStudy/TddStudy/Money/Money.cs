@@ -36,12 +36,12 @@ namespace TddStudy.Money
 
         public static Money Dollar(int amount)
         {
-            return new Dollar(amount, "USD");
+            return new Money(amount, "USD");
         }
 
         public static Money Franc(int amout)
         {
-            return new Franc(amout, "CHF");
+            return new Money(amout, "CHF");
         }
 
         public override string ToString()
