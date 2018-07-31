@@ -28,6 +28,11 @@ namespace TddStudy.Money
             return new Sum(this, added);
         }
 
+        public Money Reduce(string to)
+        {
+            return this;
+        }
+
         public string Currency()
         {
             return currency;
