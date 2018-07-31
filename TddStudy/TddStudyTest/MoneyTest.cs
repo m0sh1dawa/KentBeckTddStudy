@@ -49,5 +49,14 @@ namespace TddStudyTest
             Assert.AreEqual(five, sum.Augend);
             Assert.AreEqual(five, sum.Addend);
         }
+
+        [TestMethod]
+        public void TestReduceSum()
+        {
+            IExpression sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+            Bank bank = new Bank();
+            Money result = bank.Reduce(sum, "USD");
+            Assert.AreEqual(Money.Dollar(7), result);
+        }
     }
 }

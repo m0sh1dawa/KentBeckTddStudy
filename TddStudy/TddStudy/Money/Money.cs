@@ -8,7 +8,7 @@ namespace TddStudy.Money
 {
     public class Money : IExpression
     {
-        protected int Amount;
+        internal int Amount;
 
         protected string currency;
 

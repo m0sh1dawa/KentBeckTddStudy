@@ -10,7 +10,8 @@ namespace TddStudy.Money
     {
         public Money Reduce(IExpression source, string to)
         {
-            return Money.Dollar(10);
+            Sum sum = (Sum)source;
+            return sum.Reduce(to);
         }
     }
 }
