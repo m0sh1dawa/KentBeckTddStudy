@@ -25,7 +25,7 @@ namespace TddStudy.Money
 
         public IExpression Plus(Money added)
         {
-            return new Money(Amount + added.Amount, currency);
+            return new Sum(this, added);
         }
 
         public string Currency()

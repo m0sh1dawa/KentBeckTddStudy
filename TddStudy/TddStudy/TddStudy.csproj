@@ -45,6 +45,7 @@
     <Compile Include="Money\Bank.cs" />
     <Compile Include="Money\IExpression.cs" />
     <Compile Include="Money\Money.cs" />
+    <Compile Include="Money\Sum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
