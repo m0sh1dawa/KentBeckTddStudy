@@ -28,9 +28,9 @@ namespace TddStudy.Money
             return new Sum(this, added);
         }
 
-        public Money Reduce(string to)
+        public Money Reduce(Bank bank, string to)
         {
-            int rate = (currency.Equals("CHF") && to.Equals("USD")) ? 2 : 1;
+            int rate = bank.Rate(currency, to);
             return new Money(Amount / rate, to);
         }
 
