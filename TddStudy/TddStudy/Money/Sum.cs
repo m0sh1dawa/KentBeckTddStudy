@@ -19,7 +19,7 @@ namespace TddStudy.Money
 
         public IExpression Plus(IExpression addend)
         {
-            return null;
+            return new Sum(this, addend);
         }
 
         public Money Reduce(Bank bank, string to)

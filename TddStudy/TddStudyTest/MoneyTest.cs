@@ -92,5 +92,17 @@ namespace TddStudyTest
             Money result = bank.Reduce(fiveBucks.Plus(tenFrans), "USD");
             Assert.AreEqual(Money.Dollar(10), result);
         }
+
+        [TestMethod]
+        public void TestSumPlusMoney()
+        {
+            IExpression fiveBucks = Money.Dollar(5);
+            IExpression tenFrans = Money.Franc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            IExpression sum = new Sum(fiveBucks, tenFrans).Plus(fiveBucks);
+            Money result = bank.Reduce(sum, "USD");
+            Assert.AreEqual(Money.Dollar(15), result);
+        }
     }
 }
