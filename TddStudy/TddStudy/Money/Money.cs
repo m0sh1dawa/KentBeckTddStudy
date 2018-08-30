@@ -18,12 +18,12 @@ namespace TddStudy.Money
             this.currency = currency;
         }
 
-        public Money Times(int multiplier)
+        public IExpression Times(int multiplier)
         {
             return new Money(Amount * multiplier, currency);
         }
 
-        public IExpression Plus(Money added)
+        public IExpression Plus(IExpression added)
         {
             return new Sum(this, added);
         }

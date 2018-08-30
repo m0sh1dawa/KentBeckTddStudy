@@ -8,13 +8,18 @@ namespace TddStudy.Money
 {
     public class Sum : IExpression
     {
-        public Money Augend;
-        public Money Addend;
+        public IExpression Augend;
+        public IExpression Addend;
 
-        public Sum(Money augend, Money addend)
+        public Sum(IExpression augend, IExpression addend)
         {
             Augend = augend;
             Addend = addend;
+        }
+
+        public IExpression Plus(IExpression addend)
+        {
+            return null;
         }
 
         public Money Reduce(Bank bank, string to)

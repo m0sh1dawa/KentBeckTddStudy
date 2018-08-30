@@ -85,8 +85,8 @@ namespace TddStudyTest
         [TestMethod]
         public void TestMixedAddition()
         {
-            Money fiveBucks = Money.Dollar(5);
-            Money tenFrans = Money.Franc(10);
+            IExpression fiveBucks = Money.Dollar(5);
+            IExpression tenFrans = Money.Franc(10);
             Bank bank = new Bank();
             bank.AddRate("CHF", "USD", 2);
             Money result = bank.Reduce(fiveBucks.Plus(tenFrans), "USD");
