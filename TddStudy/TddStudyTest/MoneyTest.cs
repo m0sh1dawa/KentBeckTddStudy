@@ -81,5 +81,16 @@ namespace TddStudyTest
         {
             Assert.AreEqual(1, new Bank().Rate("USD", "USD"));
         }
+
+        [TestMethod]
+        public void TestMixedAddition()
+        {
+            Money fiveBucks = Money.Dollar(5);
+            Money tenFrans = Money.Franc(10);
+            Bank bank = new Bank();
+            bank.AddRate("CHF", "USD", 2);
+            Money result = bank.Reduce(fiveBucks.Plus(tenFrans), "USD");
+            Assert.AreEqual(Money.Dollar(10), result);
+        }
     }
 }
