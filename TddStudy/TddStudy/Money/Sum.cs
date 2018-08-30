@@ -17,6 +17,11 @@ namespace TddStudy.Money
             Addend = addend;
         }
 
+        public IExpression Times(int multiplier)
+        {
+            return new Sum(Augend.Times(multiplier), Addend.Times(multiplier));
+        }
+
         public IExpression Plus(IExpression addend)
         {
             return new Sum(this, addend);
